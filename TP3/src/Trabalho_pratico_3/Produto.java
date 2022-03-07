@@ -5,7 +5,7 @@ public abstract class Produto {
 	
 	private String marca;
 	private int quantidadeEstoque;
-	private double preco;
+	private float preco;
 	private String condicao;
 	private String genero;
 	private String descricao;
@@ -29,10 +29,10 @@ public abstract class Produto {
 	public void setQuantidadeEstoque(int quantidadeEstoque) {
 		this.quantidadeEstoque = quantidadeEstoque;
 	}
-	public double getPreco() {
+	public float getPreco() {
 		return preco;
 	}
-	public void setPreco(double preco) {
+	public void setPreco(float preco) {
 		this.preco = preco;
 	}
 	public String getCondicao() {
