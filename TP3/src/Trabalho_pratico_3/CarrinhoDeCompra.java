@@ -20,7 +20,7 @@ public class CarrinhoDeCompra {
 	}
 
 	//permite adicionar produtos associados ao carrinho
-	public void adicionarCarrinho(Produto produto) {
+	public void adicionarProduto(Produto produto) {
 		produtos.add(produto);
 	}
 			
@@ -30,12 +30,7 @@ public class CarrinhoDeCompra {
 	}
 			
 	//exclui o produto associado ao carrinho
-	public void excluirProdutoCarrinho(Produto produto) {
+	public void excluirProduto(Produto produto) {
 		produtos.remove(produto);
-	}
-	
-	//pega a posiçao de onde o produto se encontra
-	public Produto getProduto(int posicao) {
-		return produtos.get(posicao);
-	}
+	}	
 }

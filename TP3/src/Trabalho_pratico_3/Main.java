@@ -27,8 +27,6 @@ public class Main {
 			Pessoa p[] = new Pessoa[100]; 
 			
 			Produto v[] = new Produto[100];
-			
-			CarrinhoDeCompra c1 = new CarrinhoDeCompra();
 				
 		//=============================/
 		
@@ -129,16 +127,14 @@ public class Main {
 		case 3:
 			System.out.println("\n\t---- CARRINHO DE COMPRAS ----\n");
 
-				System.out.println(c1.getProduto(0).getMarca());
-				
+			
+			
 			System.out.println("\nCategoria cadastrada com sucesso! ");
 			break;
 
 		case 4:
 			System.out.println("\n\t---- ROUPAS FAVORITAS ----\n");
-			
-			
-			
+
 			System.out.println("\nPromoção cadastrada com sucesso! ");
 			break;
 
@@ -173,9 +169,6 @@ public class Main {
 					
 					System.out.println("\n");
 				}
-				
-			System.out.println("Para adicionar algum produto na lista de Roupas Favoritas, digite o seu nome");
-			c1.adicionarCarrinho(v4);
 			
 			break;
 
