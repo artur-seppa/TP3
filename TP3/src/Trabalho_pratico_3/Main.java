@@ -9,10 +9,10 @@ public class Main {
 		System.out.print("|------------------------------------------------|\n");
 		System.out.print("|    1. Cadastrar Novo Usuario                   |\n");
 		System.out.print("|    2. Cadastrar Novo Item                      |\n");
-		System.out.print("|    3. Ver Carrinho de Compras                  |\n");
-		System.out.print("|    4. Ver Lista de Roupas Favoritas            |\n");
-		System.out.print("|    5. Visualizar Produtos                      |\n");
-		System.out.print("|    6. Ver Carrinho de Compras                  |\n");
+		System.out.print("|    3. Cadastrar Nova Categoria                 |\n");
+		System.out.print("|    4. Cadastrar Nova Promoção                  |\n");
+		System.out.print("|    5. Imprimir Lista De Desejos                |\n");
+		System.out.print("|    6. Imprimir Lista De Destaques              |\n");
 		System.out.print("|    7. Imprimir Relacao Vendedor-Cliente        |\n");
 		System.out.print("|    8. Publicar Novo Item                       |\n");
 		System.out.print("|    0. Sair                                     |\n");
@@ -22,21 +22,12 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		//====== array de usuarios=======/
-		//	100 usuarios sao criados
-			Pessoa p[] = new Pessoa[100]; 
-			
-			Produto v[] = new Produto[100];
-				
-		//=============================/
-		
 		//====== logar usuario ======/
-		p[1] = new Pessoa();
-		p[1].setNome("Raul");
-		p[1].setSexo("masc");
-		p[1].setCpf("043485");
+		Pessoa p2 = new Pessoa();
+		p2.setNome("Raul");
+		p2.setSexo("masc");
+		p2.setCpf("043485");
 		//===========================/
-		
 		int opcao;
 		
 		do {
@@ -62,21 +53,20 @@ public class Main {
 				t1.setDdd(221);
 				t1.setTelefone(8922);
 				
-				//o usuario p[0] é instanciado
-				p[0] = new Pessoa();
-				p[0].setNome(input);
-				p[0].setSexo("masc");
-				p[0].setCpf("043485");
+				Pessoa p1 = new Pessoa();
+				p1.setNome(input);
+				p1.setSexo("masc");
+				p1.setCpf("043485");
 				
 				//associa o objeto pessoa com telefone.
-				p[0].setTelefone(t1);
+				p1.setTelefone(t1);
 				//associa o objeto pessoa com endereco.
-				p[0].setEndereco(e1);
+				p1.setEndereco(e1);
 				
-				System.out.println("o nome do usuario é : "+ p[0].getNome());
-				System.out.println("o telefone da pessoa é "+ p[0].getTelefone().getTelefone());
-				System.out.println("o endereco do usuario é " + p[0].getEndereco().getBairro());
-				System.out.println("o cep do usuario é " + p[0].getEndereco().getCep());
+				System.out.println("o nome do usuario é : "+ p1.getNome());
+				System.out.println("o telefone da pessoa é "+ p1.getTelefone().getTelefone());
+				System.out.println("o endereco do usuario é " + p1.getEndereco().getBairro());
+				System.out.println("o cep do usuario é " + p1.getEndereco().getCep());
 
 			System.out.println("\nVendedor cadastrado com sucesso! ");
 			break;
@@ -91,85 +81,50 @@ public class Main {
 			v1.setCategoria("camiseta");
 			v1.setQuantidadeEstoque(2);
 			v1.setMarca("lost");
-			v1.setPreco(110.99f);
 			
 			VestuarioDeCima v2 = new VestuarioDeCima();
 			v2.setMarca("blunt");
-			v2.setCategoria("casaco");
-			v2.setPreco(99.00f);
-			v2.setDescricao("casaco para frio");
 			
 			//associa o nome da pessoa ao produto.
-			v1.setPessoa(p[1]);
-			v2.setPessoa(p[1]);
+			v1.setPessoa(p2);
+			v2.setPessoa(p2);
 			
 			//associa o produto a pessoa.
-			p[1].adicionarProduto(v1);
-			p[1].adicionarProduto(v2);
+			p2.adicionarProduto(v1);
+			p2.adicionarProduto(v2);
 			
 //			System.out.println("nome de quem ta vendendo: "+ v1.getPessoa().getNome());
 //			System.out.println("categoria : "+ v1.getCategoria());
 //			System.out.println("marca : "+ v1.getMarca());
 			
 			//lista a marca de produtos associados a pessoa
-			for(int i=0; i<p[1].quantidadeProdutos(); i++) {
-				System.out.println(p[1].getProduto(i).getMarca());
+			for(int i=0; i<p2.quantidadeProdutos(); i++) {
+				System.out.println(p2.getProduto(i).getMarca());
 			}
 			
 			//excluir um produto associado do Usuario
-//			p[1].excluirProduto(v2);
-//			System.out.println("testee");
+			p2.excluirProduto(v2);
+			System.out.println("testee");
 			
 			
 			System.out.println("\nItem cadastrada com sucesso! ");
 			break;
 
 		case 3:
-			System.out.println("\n\t---- CARRINHO DE COMPRAS ----\n");
+			System.out.println("\n\t---- CADASTRAR CATEGORIA ----\n");
 
-			
-			
 			System.out.println("\nCategoria cadastrada com sucesso! ");
 			break;
 
 		case 4:
-			System.out.println("\n\t---- ROUPAS FAVORITAS ----\n");
+			System.out.println("\n\t---- CADASTRAR PROMOÇÃO ----\n");
 
 			System.out.println("\nPromoção cadastrada com sucesso! ");
 			break;
 
 		case 5:
-			System.out.println("\n\t----  PRODUTOS DISPONIVEIS ----\n");
-			
-			VestuarioDeCima v3 = new VestuarioDeCima();
-			v3.setMarca("DC");
-			v3.setCategoria("camisa");
-			v3.setPreco(99.00f);
-			v3.setDescricao("camisa florida");
-			
-			VestuarioDeCima v4 = new VestuarioDeCima();
-			v4.setMarca("Marvel");
-			v4.setCategoria("camiseta");
-			v4.setPreco(99.00f);
-			v4.setDescricao("camiseta social");
-			
-			
-			for (int i = 0; i<=1; i++) {
-				System.out.println("Produto");
-				System.out.println(v3.getMarca());
-				System.out.println(v3.getCategoria());
-			}
+			System.out.println("\n\t----  LISTA DE DESEJOS ----\n");
 
-				//lista a marca de produtos associados a pessoa p[1].
-				for(int i=0; i<p[1].quantidadeProdutos(); i++) {
-					System.out.println("PRODUTO");
-					System.out.println(p[1].getProduto(i).getMarca());
-					System.out.println(p[1].getProduto(i).getDescricao());
-					System.out.println(p[1].getProduto(i).getPreco());
-					
-					System.out.println("\n");
-				}
-			
 			break;
 
 		case 6:
