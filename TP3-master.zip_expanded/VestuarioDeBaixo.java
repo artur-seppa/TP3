@@ -37,4 +37,7 @@ public class VestuarioDeBaixo extends Produto{
 	public void setTamanho(String tamanho) {
 		this.tamanho = tamanho;
 	}
+	
+	
+
 }
