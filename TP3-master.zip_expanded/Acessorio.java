@@ -1,10 +1,9 @@
 package Trabalho_pratico_3;
 
-public class VestuarioDeBaixo extends Produto{
+public class Acessorio extends Produto{
 	private String categoria;
 	private String estilo;
 	private String cor;
-	private String tecido;
 	private String tamanho;
 	
 	public String getCategoria() {
@@ -24,12 +23,6 @@ public class VestuarioDeBaixo extends Produto{
 	}
 	public void setCor(String cor) {
 		this.cor = cor;
-	}
-	public String getTecido() {
-		return tecido;
-	}
-	public void setTecido(String tecido) {
-		this.tecido = tecido;
 	}
 	public String getTamanho() {
 		return tamanho;
