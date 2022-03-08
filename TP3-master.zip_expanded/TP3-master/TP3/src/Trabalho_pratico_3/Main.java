@@ -87,21 +87,21 @@ public class Main {
 			System.out.println("Digite o seu item a ser cadastrado:");
     		input = ler.next();
     		
-			VestuarioDeCima v1 = new VestuarioDeCima();
-			v1.setCategoria("camiseta");
-			v1.setQuantidadeEstoque(2);
-			v1.setMarca("lost");
-			v1.setPreco(110.99f);
+			Roupa r1 = new Roupa();
+			r1.setCategoria("camiseta");
+			r1.setQuantidadeEstoque(2);
+			r1.setMarca("lost");
+			r1.setPreco(110.99f);
 			
-			VestuarioDeCima v2 = new VestuarioDeCima();
-			v2.setMarca("blunt");
-			v2.setCategoria("casaco");
-			v2.setPreco(99.00f);
-			v2.setDescricao("casaco para frio");
+			Roupa r2 = new Roupa();
+			r2.setMarca("blunt");
+			r2.setCategoria("casaco");
+			r2.setPreco(99.00f);
+			r2.setDescricao("casaco para frio");
 			
 			//associa o nome da pessoa ao produto.
-			v1.setPessoa(p[1]);
-			v2.setPessoa(p[1]);
+			r1.setPessoa(p[1]);
+			r2.setPessoa(p[1]);
 			
 			//associa o produto a pessoa.
 			p[1].adicionarProduto(v1);

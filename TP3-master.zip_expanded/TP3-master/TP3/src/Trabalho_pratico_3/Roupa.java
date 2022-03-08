@@ -1,6 +1,6 @@
 package Trabalho_pratico_3;
 
-public class VestuarioDeCima extends Produto{
+public class Roupa extends Produto{
 	private String categoria;
 	private String estilo;
 	private String cor;
